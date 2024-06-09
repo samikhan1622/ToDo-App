@@ -1,3 +1,4 @@
+"use client"
 import Form from "./ui/Form";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { ChangeStatus } from "@/app/actions/todoActions";
@@ -15,8 +16,9 @@ export const ChangeTodo = ({todo}: {todo: todoTypes}) => {
   return (
     <Form action={ChangeStatus}>
         <Input name="inputId" value={todo.id} type="hidden"/>
-        <Buttons actionButton type="submit" text={<AiOutlineCheckCircle />} 
-        
+        <Buttons actionButton type="submit" text={<AiOutlineCheckCircle />} onClick={function (): void {
+        throw new Error("Function not implemented.");
+      } }        
         />
     </Form>
   )
