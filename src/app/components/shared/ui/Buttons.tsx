@@ -6,7 +6,7 @@ import { FiMenu } from "react-icons/fi";
 interface buttonProps {
     type?: "button" | "submit" | "reset",
     text: string | ReactNode,
-    onClick: () => void,
+    onClick?: () => void,
     actionButton: boolean
 }
 
