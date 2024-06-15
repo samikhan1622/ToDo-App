@@ -1,19 +1,12 @@
 {
-    "builds": [
-        {
-            "src": "package.json",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": [
-                    "node_modules/.prisma/client/**/*"
-                ]
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": ""
-        }
-    ]
-}
+    "build": {
+      "env": {
+        "DATABASE_URL": "mongodb+srv://Samisherzaman:admin@todo.rjwdz2s.mongodb.net/todo?retryWrites=true&w=majority&appName=todo"
+
+      },
+      "commands": {
+        "build": "npm run build && prisma generate"
+      }
+    }
+  }
+  
