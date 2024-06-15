@@ -1,12 +1,13 @@
 {
-    "build": {
-      "env": {
-        "DATABASE_URL": "mongodb+srv://Samisherzaman:admin@todo.rjwdz2s.mongodb.net/todo?retryWrites=true&w=majority&appName=todo"
+  "build": {
+    "env": {
+      "DATABASE_URL": "mongodb+srv://Samisherzaman:admin@todo.rjwdz2s.mongodb.net/todo?retryWrites=true&w=majority&appName=todo"
 
-      },
-      "commands": {
-        "build": "npm run build && prisma generate"
-      }
+    },
+    "commands": {
+      "build": "prisma generate && next build"
     }
   }
+}
+
   
