@@ -22,16 +22,17 @@ async function getData () {
 const Home = async() => {
   const data = await getData();
   return (
-    <div className='w-screen py-20 flex justify-center flex-col items-center'>
+    <div className='w-screen py-20 flex justify-center flex-col items-center bg-gray-300'>
       <span className='text-3xl font-extrabold uppercase'>To-Do-App</span>
-      <h1 className='text-3xl font-extrabold uppercase mt-5'>Next.js
-      <span className='text-orange-700 ml-2'>Server Action</span>
+      <h1 className='text-3xl font-extrabold uppercase mt-5'>
+        Next.js
+        <span className='text-orange-700 ml-2'>Server Action</span>
       </h1>
-      <div className='flex justify-center flex-col items-center w-[1000px] mt-10'>
+      <div className='flex justify-center flex-col items-center w-full max-w-[1000px] mt-10 px-4 sm:px-6 lg:px-8'>
         <AddTodo />
         <div className='flex flex-col gap-5 justify-center items-center mt-10 w-full'>
-          {data.map((todo, id) => (
-            <div className='w-full' key={id}>
+          {data.map((todo) => (
+            <div className='w-full' key={todo.id}>
               <Todo todo={todo} />
             </div>
           ))}
