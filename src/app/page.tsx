@@ -23,8 +23,8 @@ const Home = async() => {
   const data = await getData();
   return (
     <div className='w-screen py-20 flex justify-center flex-col items-center bg-gray-300'>
-      <span className='text-3xl font-extrabold uppercase'>To-Do-App</span>
-      <h1 className='text-3xl font-extrabold uppercase mt-5'>
+      <span className='text-3xl flex justify-center flex-col items-center font-extrabold uppercase'>To-Do-App</span>
+      <h1 className='text-3xl flex justify-center flex-col items-center font-extrabold uppercase mt-5'>
         Next.js
         <span className='text-orange-700 ml-2'>Server Action</span>
       </h1>
